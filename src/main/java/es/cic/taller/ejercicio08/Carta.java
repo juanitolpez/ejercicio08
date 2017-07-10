@@ -18,5 +18,10 @@ public class Carta {
 		this.palo = palo;
 	}
 	
+	@Override
+	public String toString() {
+		return "Carta [numero=" + numero + ", palo=" + palo + "]";
+	}
+	
 	
 }

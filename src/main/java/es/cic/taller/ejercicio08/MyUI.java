@@ -8,9 +8,11 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.themes.ValoTheme;
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
@@ -22,14 +24,26 @@ import com.vaadin.ui.VerticalLayout;
 @Theme("mytheme")
 public class MyUI extends UI {
 
-	private JuegoForm jugForm1 = new JuegoForm();
-	private JuegoForm jugForm2 = new JuegoForm();
-	private JuegoForm jugForm3 = new JuegoForm();
-	private JuegoForm jugForm4 = new JuegoForm();
+	private JuegoForm jugForm1 = new JuegoForm(this);
+	private JuegoForm jugForm2 = new JuegoForm(this);
+	private JuegoForm jugForm3 = new JuegoForm(this);
+	private JuegoForm jugForm4 = new JuegoForm(this);
 	
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
+    	TabSheet sample = new TabSheet();
+      
+    	sample.setHeight(100.0f, Unit.PERCENTAGE);
+    	sample.addStyleName(ValoTheme.TABSHEET_FRAMED);
+    	sample.addStyleName(ValoTheme.TABSHEET_PADDED_TABBAR);
+        
+        //sample.
+        //sample.
+        //sample.
+        //sample.
+    	
+    	
+    	final VerticalLayout layout = new VerticalLayout();
         
         Button button = new Button("Agregar");
         button.addClickListener( e -> {
